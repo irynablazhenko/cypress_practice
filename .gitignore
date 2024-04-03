@@ -3,3 +3,4 @@ cypress/e2e/2-advanced-examples/
 cypress/e2e/auth-tests/todo.cy.js
 cypress/fixtures
 cypress/support
+lessons/
