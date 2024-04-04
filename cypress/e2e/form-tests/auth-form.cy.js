@@ -6,7 +6,7 @@ describe('Authorization tests', () => {
     cy.get('#username').type('tomsmith');
     cy.get('#password').type('wrongPassword');
     cy.get('button[type="submit"]').click();
-    cy.get('#flash').should('have.text', `\n            Your password is invalid!\n            ×\n          `)
+    cy.get('#flash').should('have.text', `\n            Your password is invalid!\n            ×\n          `);
   })
 
   it("Test 2 - Login with an incorrect login and any password", () => {
@@ -14,8 +14,7 @@ describe('Authorization tests', () => {
     cy.get('#username').type('incorrectLogin');
     cy.get('#password').type('SuperSecretPassword!');
     cy.get('button[type="submit"]').click();
-    cy.get('#flash').should('have.text', `\n            Your username is invalid!\n            ×\n          `)
-    cy.clo
+    cy.get('#flash').should('have.text', `\n            Your username is invalid!\n            ×\n          `);
   })
 
   it("Test 3 Additional - registration with the wrong email", () => {
