@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://the-internet.herokuapp.com',
+    baseUrl: 'https://qauto.forstudy.space',
   },
 });
 
