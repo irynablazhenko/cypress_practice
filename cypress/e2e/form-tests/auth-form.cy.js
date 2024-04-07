@@ -2,7 +2,7 @@
 describe('Authorization tests', () => {
 
   it("Test 1 - Login with an existing login and incorrect password", () => {
-    cy.visit('login', { failOnStatusCode: false });
+    cy.visit('https://the-internet.herokuapp.com/login', { failOnStatusCode: false });
     cy.get('#username').type('tomsmith');
     cy.get('#password').type('wrongPassword');
     cy.get('button[type="submit"]').click();
@@ -10,7 +10,7 @@ describe('Authorization tests', () => {
   })
 
   it("Test 2 - Login with an incorrect login and any password", () => {
-    cy.visit('login', { failOnStatusCode: false });
+    cy.visit('https://the-internet.herokuapp.com/login', { failOnStatusCode: false });
     cy.get('#username').type('incorrectLogin');
     cy.get('#password').type('SuperSecretPassword!');
     cy.get('button[type="submit"]').click();
@@ -18,7 +18,7 @@ describe('Authorization tests', () => {
   })
 
   it("Test 3 Additional - registration with the wrong email", () => {
-    cy.visit('https://qauto.forstudy.space/', {
+    cy.visit('/', {
       auth: {
         username: 'guest',
         password: 'welcome2qauto'
