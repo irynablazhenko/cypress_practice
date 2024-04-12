@@ -14,7 +14,7 @@ Pre-conditions: Мануально зареєструйте нового юзе�
 Будь-яким способом перевірте, що ви на сторінці Garage
 */
 /// <reference types="cypress" />
-describe('fixtures', () => {
+describe('Sign In tests', () => {
 
     let userData;
 
@@ -30,7 +30,7 @@ describe('fixtures', () => {
         })
     })
 
-    it("Test 1 - Sign In test", () => {
+    it("Test 1 - Sign In tests", () => {
         cy.get('.header_signin').click();
         cy.get('input#signinEmail').type(userData.email);
         cy.get('input#signinPassword').type(userData.password);
